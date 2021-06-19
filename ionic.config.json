@@ -1,0 +1,7 @@
+{
+  "name": "geoposition-basico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
