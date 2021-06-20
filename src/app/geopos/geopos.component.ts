@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
-
-
-
 @Component({
   selector: 'app-geopos',
   templateUrl: './geopos.component.html',
@@ -23,7 +20,14 @@ export class GeoposComponent implements OnInit {
   constructor(private geolocation: Geolocation) { }
 
   ngOnInit() {
-    this.getCoordenadas();
+    this.lanzarGpsIntervalo();
+  }
+
+  lanzarGpsIntervalo() {
+    setInterval( () => {
+      this.getCoordenadas();
+    }, 10000);//cada 10 segundos refresca datos GPS
+
   }
 
   getCoordenadas() {
@@ -39,6 +43,7 @@ export class GeoposComponent implements OnInit {
       this.miRumbo1 = resp.coords.heading;
       this.miVelocidad1 = resp.coords.speed;
 
+
     }).catch((error) => {
       console.log('Error getting location', error);
     });
@@ -52,7 +57,7 @@ export class GeoposComponent implements OnInit {
       //*** NO FUNCIONA SEGUN DOCU OFICIAL
       //Property 'coords' does not exist on type 'Geoposition | PositionError'.
       //Property 'coords' does not exist on type 'PositionError'.ts(2339)
-       //this.miLatitud2 = data.coords.latitude ;
+      //this.miLatitud2 = data.coords.latitude ;
       // this.miLatitud2 = data.coords.longitude;
     });
   }

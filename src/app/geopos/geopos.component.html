@@ -1,49 +1,52 @@
 <div class="miCssGeopos">
   <small>[Aquí GeoposComponent, hijo de HomePage]</small>
-  <ion-text class="ion-text-center" color="danger">
-    <h3>Datos GPS del dispositivo</h3>
-  </ion-text>
 
-  <ion-grid>
-
+  <ion-grid class="ion-no-padding">
     <ion-row>
-      <ion-col>
+      <ion-col size="12" style="background-color: black; color: aliceblue;">
+        <h3>Datos GPS del dispositivo</h3>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Precisión: {{miPrecision1}}</p>
+          <ion-text>Precisión: {{miPrecision1}}</ion-text>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Latitud: {{miLatitud1}}</p>
+          <ion-text>Latitud: {{miLatitud1}}</ion-text>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Longitud: {{miLongitud1}}</p>
+          <ion-text>Longitud: {{miLongitud1}}</ion-text>
         </div>
       </ion-col>
     </ion-row>
 
 
     <ion-row>
-      <ion-col>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Altitud: {{miAltitud1}}</p>
+          <ion-text>Altitud: {{miAltitud1}}</ion-text>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Rumbo: {{miRumbo1}}</p>
+          <ion-text>Rumbo: {{miRumbo1}}</ion-text>
         </div>
       </ion-col>
-      <ion-col>
+      <ion-col size="12" size-sm style="background-color: yellow;">
         <div>
-          <p>Velocidad: {{miVelocidad1}}</p>
+          <ion-text>Velocidad: {{miVelocidad1}}</ion-text>
         </div>
       </ion-col>
     </ion-row>
-
-
   </ion-grid>
+
+  <small>[Aquí termina GeoposComponent]</small>
+
 
 </div>
